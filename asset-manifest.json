@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/test-car/static/css/main.f855e6bc.css",
+    "main.js": "/test-car/static/js/main.5cd59602.js",
+    "static/js/453.2cab371d.chunk.js": "/test-car/static/js/453.2cab371d.chunk.js",
+    "static/media/logo.svg": "/test-car/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/test-car/index.html",
+    "main.f855e6bc.css.map": "/test-car/static/css/main.f855e6bc.css.map",
+    "main.5cd59602.js.map": "/test-car/static/js/main.5cd59602.js.map",
+    "453.2cab371d.chunk.js.map": "/test-car/static/js/453.2cab371d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.5cd59602.js"
+  ]
+}
