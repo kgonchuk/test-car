@@ -1,0 +1,194 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+}
+.modalContainer {
+  position: relative;
+  width: 541px;
+  height: 752px;
+  border-radius: 24px;
+  background: #fff;
+  padding: 40px;
+}
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+}
+/* .wrapperCar {
+  border-radius: 14px;
+  background: rgba(18, 20, 23, 0.1);
+  width: 461px;
+  height: 248px;
+  margin-bottom: 14px;
+} */
+.imgCar {
+  border-radius: 14px;
+  width: 461px;
+  height: 248px;
+  object-fit: cover;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.carTitle {
+  display: flex;
+  align-items: start;
+  margin-bottom: 8px;
+}
+.carTitle h2 {
+  color: #121417;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-wrap: nowrap;
+}
+.carTitle span {
+  color: var(--pr-button-background-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+}
+.SecondaryInfo {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.SecondaryCarText {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  border-right: 1px solid rgba(18, 20, 23, 0.2);
+  padding-right: 3px;
+}
+
+.carInfo {
+  color: rgba(18, 20, 23, 0.5);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.modalDescription {
+  color: #121417;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.43;
+  margin-bottom: 24px;
+}
+.Accessories {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  /* margin: 24px 0; */
+}
+.conditionListTitle {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.AccessoriesTitle {
+  color: #121417;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.AccessoryList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  gap: 4px;
+}
+
+.AccessoryListItem {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  line-height: 18px;
+  padding-right: 4px;
+  width: calc((100%-16px) / 4);
+  border-right: 1px solid rgba(18, 20, 23, 0.2);
+}
+.secondaryTitle {
+  color: var(--pr-text-color);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  margin-bottom: 8px;
+}
+.AccessoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: rgba(18, 20, 23, 0.5);
+  font-family: inherit;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.conditionList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  /* margin-bottom: 24px; */
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  line-height: 18px;
+  padding-right: 4px;
+  width: calc((100%-16px) / 4);
+  border-right: 1px solid rgba(18, 20, 23, 0.2);
+}
+.conditionList li {
+  padding: 7px 14px;
+  border-radius: 35px;
+  background: #f9f9f9;
+  color: #363535;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.number {
+  color: var(--pr-button-background-color);
+}
+.RentalButton {
+  padding: 12px 50px;
+  border-radius: 12px;
+  background: var(--pr-button-background-color);
+  color: var(--White, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  display: inline-block;
+}
+.btn {
+}
+.RentalButton:hover,
+.RentalButton:focus {
+  background: var(--hovered-button-background-color);
+}

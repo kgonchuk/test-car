@@ -1,0 +1,47 @@
+.backgroundImg {
+  width: 100vw;
+  /* height: 100vh; */
+  background-image: url($../../../../img/бг.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 24px;
+  top: 0;
+  left: 0;
+  z-index: -20;
+  position: absolute;
+}
+.hetoTittle {
+  font-weight: bold;
+  font-size: 89px;
+  color: white;
+  text-align: center;
+  margin-top: 170px;
+}
+.heroText {
+  font-size: 54px;
+  font-weight: Medium;
+  color: white;
+  text-align: center;
+}
+
+.heroListContainer {
+}
+.heroList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.heroListItem {
+}
+.heroItemText {
+  font-size: 14px;
+  font-weight: medium;
+  color: white;
+}
+.heroText::after {
+  content: "";
+  background-color: white;
+  height: 1px;
+  display: block;
+}
