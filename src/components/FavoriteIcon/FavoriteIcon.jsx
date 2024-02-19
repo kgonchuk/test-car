@@ -8,7 +8,7 @@ const FavoriteIcon = ({ data }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
   const handleAddFavorite = (data) => {
-    if (favorites.some((car) => car.id === data.id)) {
+    if (!favorites.some((car) => car.id === data.id)) {
       dispatch(addToFavorites(data));
     } else {
       dispatch(removeFromFavorites(data));
