@@ -145,7 +145,6 @@ const Filter = () => {
             {" "}
             <input
               className={css.inputFrom}
-              id="mileageFrom"
               type="number"
               value={selectedFromMileage}
               onChange={handleInputChangeFrom}
@@ -154,9 +153,10 @@ const Filter = () => {
           </div>
           <div className={css.inputWrapper}>
             <input
-              type="text"
-              onChange={handleInputChangeTo}
               className={css.inputTo}
+              type="number"
+              value={selectedToMileage}
+              onChange={handleInputChangeTo}
               placeholder="To"
             />
           </div>
