@@ -3,12 +3,14 @@ import { addToFavorites, removeFromFavorites } from "../../redux/favoriteSlice";
 import { selectFavorites } from "../../redux/selector";
 import iconAdd from "../../img/addHeart.svg";
 import iconDel from "../../img/removeHeart.svg";
+import css from "./FavoriteIcon.module.css";
 
 const FavoriteIcon = ({ data }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
+
   const handleAddFavorite = (data) => {
-    if (favorites.some((car) => car.id === data.id)) {
+    if (!favorites.some((car) => car.id === data.id)) {
       dispatch(addToFavorites(data));
     } else {
       dispatch(removeFromFavorites(data));
@@ -21,6 +23,7 @@ const FavoriteIcon = ({ data }) => {
         alt="Like"
         aria-label="Add to Favorites"
         onClick={() => handleAddFavorite(data)}
+        className={css.favoriteImg}
       />
     </div>
   );
