@@ -38,6 +38,7 @@ import Filter from "../../components/Filter/Filter";
 import CarList from "../../components/CarList/CarList";
 import LoadMore from "../../components/Button/LoadMore";
 import Container from "../../components/Container/Container";
+import EmptySearch from "components/EmptySearch/EmptySearch";
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -54,15 +55,15 @@ const Catalog = () => {
 
   const totalPage = 3;
 
-  // useEffect(() => {
-  //   const height = 426;
-  //   if (allCars.length > 12) {
-  //     window.scrollBy({
-  //       top: height * 1.3,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }, [allCars]);
+  useEffect(() => {
+    const height = 426;
+    if (allCars.length > 12) {
+      window.scrollBy({
+        top: height * 1.3,
+        behavior: "smooth",
+      });
+    }
+  }, [allCars]);
 
   useEffect(() => {
     dispatch(clearCarsData());
@@ -96,7 +97,11 @@ const Catalog = () => {
         <Filter />
         {/* 
       {isLoading && !error && <Loader />} */}
-        <CarList cars={combinedCars} />
+        {filteredCars.length === 0 && onFilter ? (
+          <EmptySearch emptyFilter={true} />
+        ) : (
+          <CarList cars={combinedCars} />
+        )}
 
         {page < totalPage && (
           <LoadMore onFindMore={handleLoadMoreClick}>Load more</LoadMore>

@@ -29,7 +29,7 @@ const Favorites = () => {
   return (
     <Container>
       <section>
-        {favorite.lenth === 0 ? (
+        {favorite.length === 0 ? (
           <EmptySearch />
         ) : (
           <div>
