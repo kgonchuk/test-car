@@ -34,7 +34,7 @@ import {
   selectPrice,
 } from "../../redux/selector";
 import { clearCarsData } from "../../redux/carSlice";
-import Filter from "../../components/Filter/Filter";
+import Filter from "components/Filter/Filter";
 import CarList from "../../components/CarList/CarList";
 import LoadMore from "../../components/Button/LoadMore";
 import Container from "../../components/Container/Container";

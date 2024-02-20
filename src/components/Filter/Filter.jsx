@@ -67,6 +67,7 @@ const Filter = () => {
     };
     dispatch(setValueFilter(data));
   };
+
   const handleFilterClear = (e) => {
     e.preventDefault();
     const data = {
@@ -142,13 +143,11 @@ const Filter = () => {
         <p className={css.mileageTitle}>Сar mileage / km</p>
         <div className={css.inputBlock}>
           <div className={css.inputWrapper}>
-            {" "}
             <input
-              className={css.inputFrom}
-              id="mileageFrom"
               type="text"
-              value={selectedFromMileage}
               onChange={handleInputChangeFrom}
+              className={css.inputFrom}
+              // value={selectedFromMileage}
               placeholder="From"
             />
           </div>
@@ -158,6 +157,7 @@ const Filter = () => {
               onChange={handleInputChangeTo}
               className={css.inputTo}
               placeholder="To"
+              // value={selectedToMileage}
             />
           </div>
         </div>

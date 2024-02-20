@@ -1,6 +1,6 @@
 import CarListItem from "../../components/CarListItem/CarListItem";
 import Container from "../../components/Container/Container";
-import Filter from "../../components/Filter/Filter";
+import Filter from "components/Filter/Filter";
 import { useSelector } from "react-redux";
 import {
   selectFavorites,
