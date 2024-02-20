@@ -12,6 +12,7 @@ import {
 import { getFilteredCars } from "../../helpers/filteredCard";
 import css from "./FavoritePage.module.css";
 import EmptySearch from "components/Empty/EmptySearch";
+import { nanoid } from "@reduxjs/toolkit";
 
 const Favorites = () => {
   const favorite = useSelector(selectFavorites);
@@ -36,9 +37,16 @@ const Favorites = () => {
             <Filter />
             <ul className={css.carList}>
               {filteredCars.map((car) => (
-                <CarListItem car={car} key={car.id} />
+                <li key={nanoid()}>
+                  <CarListItem car={car} key={car.id} />
+                </li>
               ))}
             </ul>
+            {/* <ul className={css.carList}>
+              {filteredCars.map((car) => (
+                <CarListItem car={car} key={car.id} />
+              ))}
+            </ul> */}
           </div>
         )}
       </section>
