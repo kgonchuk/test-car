@@ -31,58 +31,34 @@ const CarListItem = ({ car }) => {
   };
   window.addEventListener("keydown", handleModalCloseEsc);
 
-  // const dispatch = useDispatch();
-  // const favorites = useSelector(selectFavorites);
-
-  // const isLiked =
-  //   favorites.length && favorites.find((favorite) => favorite.id === car.id);
-
-  // useEffect(() => {
-  //   isLiked ? setLike(true) : setLike(false);
-  // }, [isLiked]);
-
-  // const onFavoriteToggle = () => {
-  //   !isLiked
-  //     ? dispatch(addToFavorites(car))
-  //     : dispatch(removeFromFavorites(car.id));
-  //   setLike(!like);
-  // };
   return (
     <>
-      <div class={css.itemCard}>
+      <div className={css.itemCard}>
         <div>
           <FavoriteIcon data={car} />
         </div>
-        <img class={css.itemImg} src={car.img} alt={car.make} />
-        <div class={css.btnAddFavorite}>
-          {/* <button className={css.btnAddFavorite} onClick={onFavoriteToggle}>
-            {like ? (
-              <img src={iconAddFavorites} alt="icon add" />
-            ) : (
-              <img src={iconRemoveFavorites} alt="icon remove" />
-            )}
-          </button> */}
-        </div>
-        <div class={css.itemTitle}>
-          <div class={css.itemTitleInfo}>
+        <img className={css.itemImg} src={car.img} alt={car.make} />
+        <div className={css.btnAddFavorite}></div>
+        <div className={css.itemTitle}>
+          <div className={css.itemTitleInfo}>
             <p>{car.make}&nbsp;</p>
-            <p class={css.itemModel}>{car.model},&nbsp;</p>
+            <p className={css.itemModel}>{car.model},&nbsp;</p>
             <p>{car.year}</p>
           </div>
-          <p class={css.itemTitlePrice}>{car.rentalPrice}</p>
+          <p className={css.itemTitlePrice}>{car.rentalPrice}</p>
         </div>
-        <div class={css.itemInfo}>
-          <ul class={css.infoContainer}>
-            <li class={css.infoText}>{city}</li>
-            <li class={css.infoText}>{country}</li>
-            <li class={css.infoText}>{car.rentalCompany}</li>
-            <li class={css.infoText}>{car.type}</li>
-            <li class={css.infoText}>{car.model}</li>
-            <li class={css.infoText}>{car.id}</li>
-            <li class={css.infoText}>{functionalPart}</li>
+        <div className={css.itemInfo}>
+          <ul className={css.infoContainer}>
+            <li className={css.infoText}>{city}</li>
+            <li className={css.infoText}>{country}</li>
+            <li className={css.infoText}>{car.rentalCompany}</li>
+            <li className={css.infoText}>{car.type}</li>
+            <li className={css.infoText}>{car.model}</li>
+            <li className={css.infoText}>{car.id}</li>
+            <li className={css.infoText}>{functionalPart}</li>
           </ul>
         </div>
-        <button class={css.buttonItem} onClick={handlModalOpen}>
+        <button className={css.buttonItem} onClick={handlModalOpen}>
           Learn More
         </button>
       </div>

@@ -38,7 +38,8 @@ import Filter from "../../components/Filter/Filter";
 import CarList from "../../components/CarList/CarList";
 import LoadMore from "../../components/Button/LoadMore";
 import Container from "../../components/Container/Container";
-import EmptySearch from "components/EmptySearch/EmptySearch";
+import EmptySearch from "components/Empty/EmptySearch";
+import LoaderSpiner from "components/LoaderSpiner/LoaderSpiner";
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -95,14 +96,12 @@ const Catalog = () => {
     <Container>
       <div className={css.container}>
         <Filter />
-        {/* 
-      {isLoading && !error && <Loader />} */}
+        {isLoading && !error && <LoaderSpiner />} /
         {filteredCars.length === 0 && onFilter ? (
           <EmptySearch emptyFilter={true} />
         ) : (
           <CarList cars={combinedCars} />
         )}
-
         {page < totalPage && (
           <LoadMore onFindMore={handleLoadMoreClick}>Load more</LoadMore>
         )}

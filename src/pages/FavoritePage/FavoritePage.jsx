@@ -11,7 +11,7 @@ import {
 } from "../../redux/selector";
 import { getFilteredCars } from "../../helpers/filteredCard";
 import css from "./FavoritePage.module.css";
-import EmptySearch from "components/EmptySearch/EmptySearch";
+import EmptySearch from "components/Empty/EmptySearch";
 
 const Favorites = () => {
   const favorite = useSelector(selectFavorites);
