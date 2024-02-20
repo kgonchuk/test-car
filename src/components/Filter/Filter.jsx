@@ -146,7 +146,7 @@ const Filter = () => {
             <input
               className={css.inputFrom}
               id="mileageFrom"
-              type="number"
+              type="text"
               value={selectedFromMileage}
               onChange={handleInputChangeFrom}
               placeholder="From"
