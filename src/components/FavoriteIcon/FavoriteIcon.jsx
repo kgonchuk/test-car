@@ -3,6 +3,7 @@ import { addToFavorites, removeFromFavorites } from "../../redux/favoriteSlice";
 import { selectFavorites } from "../../redux/selector";
 import iconAdd from "../../img/addHeart.svg";
 import iconDel from "../../img/removeHeart.svg";
+import css from "./FavoriteIcon.module.css";
 
 const FavoriteIcon = ({ data }) => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const FavoriteIcon = ({ data }) => {
   return (
     <div>
       <img
+        className={css.favoriteimg}
         src={favorites.some((car) => car.id === data.id) ? iconAdd : iconDel}
         alt="Like"
         aria-label="Add to Favorites"

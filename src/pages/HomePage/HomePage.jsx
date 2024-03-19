@@ -6,19 +6,13 @@ const HomePage = () => {
   return (
     <Container>
       <article className={css.backgroundImg}>
-        <h1 className={css.hetoTittle}>Car to rent in Ukrain</h1>
+        <h1 className={css.hetoTittle}>Car to rent in Ukraine</h1>
         <p className={css.heroText}>
           Сar rental and rental with and without driver
         </p>
         <div className={css.heroListContainer}>
           <ul className={css.heroList}>
             <li className={css.heroListItem}>
-              <svg>
-                <use>
-                  <img src="../../img/symbol-defs.svg#icon-number2" alt="" />
-                </use>
-              </svg>
-
               <p className={css.heroItemText}>Large fleet of cars available</p>
             </li>
             <li className={css.heroListItem}>

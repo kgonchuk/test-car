@@ -1,14 +1,15 @@
 .backgroundImg {
   width: 100vw;
-  /* height: 100vh; */
-  background-image: url($../../../../img/бг.png);
+  height: 100vh;
+  background-image: url($../../../../img/luxurious-car-parked-on-the-highway-with-an-illuminated-headlight-at-sunset.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom-right-radius: 24px;
+  /* border-bottom-right-radius: 10px; */
   top: 0;
   left: 0;
   z-index: -20;
   position: absolute;
+  /* border-radius: 10px; */
 }
 .hetoTittle {
   font-weight: bold;
@@ -23,7 +24,6 @@
   color: white;
   text-align: center;
 }
-
 .heroListContainer {
 }
 .heroList {
@@ -31,11 +31,11 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-top: 50px;
 }
-.heroListItem {
-}
+
 .heroItemText {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: medium;
   color: white;
 }
@@ -44,4 +44,5 @@
   background-color: white;
   height: 1px;
   display: block;
+  margin-top: 50px;
 }
