@@ -30,17 +30,17 @@
 }
 .burgerIcon {
   padding: 0;
+  fill: red;
 }
 @media (min-width: 768px) {
   .visionWraper {
-    /* width: 1220px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     background-color: #181818;
     height: 124px;
-    /* width: 100%; */
+
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -48,7 +48,7 @@
     font-size: 12px;
   }
 
-  .mobileMenu {
+  .menuButton {
     display: none;
   }
 }

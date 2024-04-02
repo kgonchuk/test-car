@@ -1,22 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import css from "./CarListItem.module.css";
 import Modal from "components/Modal/Modal";
-import iconAddFavorites from "../../img/addHeart.svg";
-import iconRemoveFavorites from "../../img/removeHeart.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites } from "../../redux/selector";
-
-import { addToFavorites, removeFromFavorites } from "../../redux/favoriteSlice";
 import FavoriteIcon from "components/FavoriteIcon/FavoriteIcon";
 
 const CarListItem = ({ car }) => {
   const [openModal, setOpenModal] = useState(false);
-  const [like, setLike] = useState(false);
 
   const addressParts = car.address.split(", ");
-  const city = addressParts[1];
-  const country = addressParts[2];
-  const functionalPart = car.functionalities[0];
+  const city = addressParts[addressParts.length - 2];
+  const country = addressParts[addressParts.length - 1];
+  const formattedAddress = `${city} | ${country} |`;
 
   const handlModalOpen = () => {
     setOpenModal(true);
@@ -33,7 +26,7 @@ const CarListItem = ({ car }) => {
 
   return (
     <>
-      <div className={css.itemCard}>
+      {/* <div className={css.itemCard}>
         <div>
           <FavoriteIcon data={car} />
         </div>
@@ -55,13 +48,42 @@ const CarListItem = ({ car }) => {
             <li className={css.infoText}>{car.type}</li>
             <li className={css.infoText}>{car.model}</li>
             <li className={css.infoText}>{car.id}</li>
-            <li className={css.infoText}>{functionalPart}</li>
+            <li className={css.infoText}>{car.accessories[2]}</li>
           </ul>
         </div>
+      </div> */}
+      <div className={css.itemCard}>
+        <div className={css.wrapperFoto}>
+          <img
+            className={css.itemImg}
+            src={car.img}
+            alt={car.make}
+            loading="lazy"
+          />
+          <div>
+            <FavoriteIcon data={car} />
+          </div>
+        </div>
+        <div className={css.wrapper}>
+          <div className={css.wrap}>
+            {car.make}
+            <span className={css.wrapperModel}>{car.model}, </span>
+            {car.year}
+          </div>
+          <div>{car.rentalPrice}</div>
+        </div>
+
+        <p className={css.text}>
+          {formattedAddress} {car.rentalCompany}
+        </p>
+        <p className={css.text}>
+          {car.type} | {car.model} | {car.id} | {car.accessories[0]}
+        </p>
         <button className={css.buttonItem} onClick={handlModalOpen}>
           Learn More
         </button>
       </div>
+
       {openModal && (
         <Modal closeModal={hadleModalClose} car={car} key={car.id} />
       )}

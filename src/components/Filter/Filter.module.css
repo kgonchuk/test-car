@@ -29,8 +29,9 @@
   position: absolute;
   top: 40%;
   right: 15px;
-  transform: translate(-50%);
-  /* трикутник */
+  /* transform: translate(-50%); */
+  /* transform: rotate(180deg); */
+
   width: 0;
   height: 0;
   border-width: 10.4px 6px 0 6px;
@@ -38,6 +39,7 @@
   border-style: solid;
   pointer-events: none;
 }
+
 .dropDownButtonPrice {
   composes: dropDownButton;
   width: 125px;
@@ -187,4 +189,42 @@
   .dropDownButton {
     width: 224px;
   }
+}
+.labelMakes {
+  color: #8a8a89;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 128.571%;
+}
+.wrapperFlex {
+  display: flex;
+  margin-top: 8px;
+}
+.wrapperFrom {
+  color: #121417;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 111.111%;
+  border-radius: 14px 0px 0px 14px;
+  padding: 14px 0 14px 24px;
+  border-right: 2px solid rgba(138, 138, 137, 0.2);
+  background: #f7f7fb;
+}
+.inputMile {
+  background: #f7f7fb;
+  border: none;
+  outline: none;
+  width: 89px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 111.111%;
+}
+.wrapperTo {
+  color: #121417;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 111.111%;
+  border-radius: 0px 14px 14px 0px;
+  padding: 14px 23px 14px 24px;
+  background: #f7f7fb;
 }

@@ -3,7 +3,7 @@ import logo from "../../../img/logo.png";
 
 import css from "./AppBar.module.css";
 import Container from "components/Container/Container";
-import { ReactComponent as MenuIcon } from "../../../img/menu-3.svg";
+import { ReactComponent as MenuIcon } from "../../../img/menu.svg";
 import { useState } from "react";
 import MobileMenu from "components/MobileMenu/MobileMenu";
 
@@ -19,11 +19,9 @@ const AppBar = () => {
         <div className={css.visionWraper}>
           <Navigation />
         </div>
-        <div className={css.mobileMenu}>
-          <button className={css.burgerBtn} onClick={handleShowModal}>
-            <MenuIcon width={30} height={30} className={css.burgerIcon} />
-          </button>
-        </div>
+        <button onClick={handleShowModal} className={css.menuButton}>
+          <MenuIcon width={30} height={30} />
+        </button>
       </header>
       {isShowModal && <MobileMenu closeMobileModal={handleShowModal} />}
     </Container>

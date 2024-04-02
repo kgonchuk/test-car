@@ -96,7 +96,7 @@ const Catalog = () => {
     <Container>
       <div className={css.container}>
         <Filter />
-        {isLoading && !error && <LoaderSpiner />} /
+        {isLoading && !error && <LoaderSpiner />}
         {filteredCars.length === 0 && onFilter ? (
           <EmptySearch emptyFilter={true} />
         ) : (

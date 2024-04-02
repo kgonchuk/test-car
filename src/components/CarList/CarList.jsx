@@ -7,7 +7,7 @@ const CarList = ({ cars }) => {
     <div className={css.carListWrap}>
       <ul className={css.listContainer}>
         {cars.map((car) => (
-          <li key={nanoid()}>
+          <li className={css.listItem} key={nanoid()}>
             <CarListItem car={car} key={car.id} />
           </li>
         ))}{" "}

@@ -139,7 +139,7 @@ const Filter = () => {
         </ul>
       </div>
 
-      <div>
+      {/* <div>
         <p className={css.mileageTitle}>Сar mileage / km</p>
         <div className={css.inputBlock}>
           <div className={css.inputWrapper}>
@@ -161,8 +161,32 @@ const Filter = () => {
             />
           </div>
         </div>
+      </div> */}
+      <div>
+        <label className={css.labelMakes}>
+          Сar mileage / km
+          <div className={css.wrapperFlex}>
+            <div className={css.wrapperFrom}>
+              <input
+                className={css.inputMile}
+                type="number"
+                name="from"
+                placeholder="From"
+                onChange={handleInputChangeFrom}
+              />
+            </div>
+            <div className={css.wrapperTo}>
+              <input
+                className={css.inputMile}
+                type="number"
+                name="to"
+                placeholder="To"
+                onChange={handleInputChangeTo}
+              />
+            </div>
+          </div>
+        </label>
       </div>
-
       <div className={css.btnWrap}>
         <button
           type="button"

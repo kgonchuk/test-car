@@ -29,23 +29,7 @@ const MobileMenu = ({ closeMobileModal }) => {
         </button>
         <div className={css.visionWraper}>
           <Navigation />
-          <ul className={css.list}>
-            <li>
-              <a href="#" className={css.link}>
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="#" className={css.link}>
-                Price
-              </a>
-            </li>
-            <li>
-              <a href="#" className={css.link}>
-                Contact
-              </a>
-            </li>
-          </ul>
+
         </div>
       </div>
     </div>

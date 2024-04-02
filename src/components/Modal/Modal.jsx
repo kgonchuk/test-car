@@ -45,7 +45,6 @@ const Modal = ({ closeModal, car }) => {
           </div>
         </div>
         <div className={css.modalDescription}>{car.description}</div>
-
         <div className={css.Accessories}>
           <div className={css.AccessoriesTitle}>
             Accessories and functionalities:
@@ -63,7 +62,6 @@ const Modal = ({ closeModal, car }) => {
             ))}
           </ul>
         </div>
-
         <div className={css.RentalBlock}>
           <div className={css.conditionListTitle}>Rental Conditions:</div>
           <div className={css.AccessoriesList}>
@@ -79,19 +77,18 @@ const Modal = ({ closeModal, car }) => {
               {rentalConditionsSplitted[2]}
             </div>
             <div className={css.conditionList}>
-              Mileage: <span>{car.mileage.toLocaleString("en-EN")}</span>
+              Mileage: <span>{car.mileage}</span>
             </div>
             <div className={css.conditionList}>
               Price: <span>{car.rentalPrice}</span>
             </div>
           </div>
         </div>
-        <div className={css.btn}>
-          {" "}
+        <button className={css.btnContainer}>
           <a href="tel:+380730000000" className={css.RentalButton}>
             Rental car
           </a>
-        </div>
+        </button>
       </div>
     </div>
   );

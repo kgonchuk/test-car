@@ -12,11 +12,23 @@
 }
 .modalContainer {
   position: relative;
-  width: 541px;
+  width: 300px;
   height: 752px;
   border-radius: 24px;
   background: #fff;
-  padding: 40px;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .modalContainer {
+    width: 541px;
+    height: 752px;
+  }
+  .imgCar {
+    width: 461px;
+  }
+  .modalContainer {
+    padding: 40px;
+  }
 }
 .closeBtn {
   position: absolute;
@@ -24,16 +36,10 @@
   right: 10px;
   background: transparent;
 }
-/* .wrapperCar {
-  border-radius: 14px;
-  background: rgba(18, 20, 23, 0.1);
-  width: 461px;
-  height: 248px;
-  margin-bottom: 14px;
-} */
+
 .imgCar {
   border-radius: 14px;
-  width: 461px;
+  /* width: 264px; */
   height: 248px;
   object-fit: cover;
   overflow: hidden;
@@ -93,16 +99,18 @@
   font-size: 14px;
   line-height: 1.43;
   margin-bottom: 24px;
+  text-align: left;
 }
 .Accessories {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
-  /* margin: 24px 0; */
+  text-align: left;
 }
 .conditionListTitle {
   margin-bottom: 8px;
   font-size: 14px;
+  text-align: left;
 }
 .AccessoriesTitle {
   color: #121417;
@@ -176,19 +184,26 @@
   color: var(--pr-button-background-color);
 }
 .RentalButton {
+  margin-top: 16px;
+  display: inline-flex;
   padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
-  background: var(--pr-button-background-color);
+  background-color: var(--pr-button-background-color);
   color: var(--White, #fff);
-  font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.43;
-  display: inline-block;
+  line-height: 142.857%;
+  cursor: pointer;
+  transition-property: background-color;
 }
-.btn {
-}
+
 .RentalButton:hover,
 .RentalButton:focus {
+  transform: scale(1.02);
   background: var(--hovered-button-background-color);
+}
+.btnContainer {
+  display: block;
 }

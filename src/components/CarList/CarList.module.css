@@ -1,10 +1,11 @@
 .listContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  padding-top: 50px;
+  flex-wrap: wrap;
+  column-gap: 30px;
   row-gap: 50px;
-  column-gap: 29px;
-  margin: 0 auto 100px;
+  margin-bottom: 100px;
 }
 .carListWrap {
   display: grid;
@@ -12,4 +13,9 @@
   gap: 50px 9px;
   justify-items: center;
   justify-content: space-around;
+}
+.listItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
